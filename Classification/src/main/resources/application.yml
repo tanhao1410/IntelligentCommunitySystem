@@ -1,0 +1,15 @@
+ai:
+  #合并后的分词语料库
+  wordLib: D:\\article.txt
+  dataPath: D:\\crawler
+  # 词向量模型
+  vecModel: d:\\article.vecmodel
+  # 卷积神经网络模型
+  cnnModel: d:\\article.cnnmodel
+spring:
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/majiang?useUnicode=true&amp&characterEncoding=utf-8
+    type: com.alibaba.druid.pool.DruidDataSource

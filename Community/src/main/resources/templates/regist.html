@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>学习平台</title>
+    <head th:insert="~{import :: head}"></head>
+</head>
+<body>
+<div th:insert="~{navigation :: nav}"></div>
+<div class="container-fluid main">
+    <div class="row">
+        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+
+            <h2 style="color: white">注册</h2>
+            <p th:text="${message}"></p>
+
+            <form id="register_form" method="post" onsubmit="return false" enctype="multipart/form-data" action="/user">
+                <ul>
+                    <li>
+                        <input type="text" id="loginUserNameInput" class="form-control" placeholder="邮箱 / 用户名" name="userName" />
+                    </li>
+                    <li>
+                        <input type="password" id="loginPasswordInput" class="form-control" placeholder="密码" name="password" />
+                    </li>
+                    <li>
+                        <input type="password" id="loginPasswordInput2" class="form-control" placeholder="确认密码" name="password2" />
+                    </li>
+
+                    <li>
+                        <input type="file" value="选择头像" name="file"  accept=".jpeg, .jpg"/>
+                    </li>
+
+
+
+                    <li class="last">
+                        <a href="javascript:;" onclick="document:register_form.submit()" class="pull-right btn btn-large btn-primary">注册</a>
+                    </li>
+                </ul>
+            </form>
+
+        </div>
+
+    </div>
+</div>
+<div th:insert="~{footer :: foot}"></div>
+</body>
+</html>

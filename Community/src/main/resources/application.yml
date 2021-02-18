@@ -1,0 +1,27 @@
+pic-server:
+  path: http://127.0.0.1/
+  location: C:\\Users\\tanhao\\Desktop\\工程实践\\pic-server\\
+spring:
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/majiang?useUnicode=true&amp&characterEncoding=utf-8
+    type: com.alibaba.druid.pool.DruidDataSource
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB  #单个文件的最大上限
+      max-request-size: 30MB #单个请求的文件总大小上限
+
+mybatis:
+  # 指定sql映射文件位置
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+server:
+  port: 8887
+logging:
+  file: logs/community.log
+  level:
+    root: info

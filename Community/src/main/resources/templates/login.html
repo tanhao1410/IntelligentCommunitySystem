@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>学习平台</title>
+    <head th:insert="~{import :: head}"></head>
+</head>
+<body>
+<div th:insert="~{navigation :: nav}"></div>
+<div class="container-fluid main">
+    <div class="row">
+        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+
+            <h2 style="color: white">中文社区</h2>
+
+            <form id="login_form" method="post" onsubmit="return false" action="/login">
+
+                <p th:text="${message}"></p>
+                <ul>
+                    <li>
+                        <input type="text" id="loginUserNameInput" class="form-control" placeholder="邮箱 / 用户名" name="userName" />
+                    </li>
+                    <li>
+                        <input type="password" id="loginPasswordInput" class="form-control" placeholder="密码" name="password" />
+                    </li>
+                    <li class="alert alert-danger hide error_message">
+                        <i class="icon icon-delete"></i> <em></em>
+                    </li>
+                    <li class="last">
+                        <a href="javascript:;" onclick="document:login_form.submit()" id="loginButton22" class="pull-right btn btn-large btn-primary">登录</a>
+                        <label>
+                            <input type="checkbox" value="1" name="net_auto_login" />
+                            记住我							</label>
+                        <a href="/register">&nbsp;&nbsp;注册</a>
+                    </li>
+                </ul>
+            </form>
+
+        </div>
+
+    </div>
+</div>
+<div th:insert="~{footer :: foot}"></div>
+</body>
+</html>
